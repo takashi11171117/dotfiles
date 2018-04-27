@@ -1,16 +1,16 @@
-###管理フォルダ作成
+## 管理フォルダ作成
 ```
 $ cd ~/
 $ mkdir dotfiles
 ```
 
-###クローン
+## クローン
 ```
 $ cd ~/
 $ git clone https://github.com/takashi11171117/dotfiles.git
 ```
 
-###シンボリックを貼る
+## シンボリックを貼る
 ```
 $ ln -sf ~/dotfiles/.vimrc ~/.vimrc
 $ ln -sf ~/dotfiles/colors ~/.vim
