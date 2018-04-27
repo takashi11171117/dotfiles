@@ -6,7 +6,7 @@ $ mkdir dotfiles
 
 ## クローン
 ```
-$ cd ~/
+$ cd ~/dotfiles
 $ git clone https://github.com/takashi11171117/dotfiles.git
 ```
 
