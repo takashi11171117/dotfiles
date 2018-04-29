@@ -60,12 +60,6 @@ alias apbash='/Applications/Atom.app/Contents/MacOS/Atom ~/.bash_profile'
 alias spbash='source ~/.bash_profile'
 alias bh='cat ~/.bash_history'
 
-#アプリケーション
-alias a="/Applications/Atom.app/Contents/MacOS/Atom"
-alias chrome='open -a "Google Chrome.app"'
-alias safari='open -a "Safari.app"'
-alias firefox='open -a "Firefox.app"'
-
 #host
 alias ahost='/Applications/Atom.app/Contents/MacOS/Atom /etc/hosts'
 
@@ -84,6 +78,15 @@ alias dl="docker logs"
 alias drmi="docker rmi $(sudo docker images -q)"
 alias drm="docker rm $(sudo docker ps -a -q)"
 alias dm="docker-machine"
+alias dms="docker-machine-start"
+
+docker-machine-start() {
+  docker-machine start $1
+
+  if (docker-machine env $1 2>&1 | grep -q 'regenerate-certs'); then
+    docker-machine -f regenerate-certs $1
+  fi
+}
 
 #docker-compose
 alias dcu="docker-compose up -d"
@@ -100,7 +103,3 @@ alias vp='vagrant provision'
 
 #berks
 alias bv='chef exec berks vendor cookbooks'
-
-alias dfl='sudo cat /fluentd/log/docker.log'
-
-alias bh='cat ~/.bash_history'
