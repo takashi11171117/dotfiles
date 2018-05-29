@@ -54,9 +54,9 @@ alias la='ls -laG'
 #ホームディレクトリ
 
 #bash編集
-alias abash='/Applications/Atom.app/Contents/MacOS/Atom ~/.bashrc'
+alias cbash='code ~/dotfiles/.bashrc'
 alias sbash='source ~/.bashrc'
-alias apbash='/Applications/Atom.app/Contents/MacOS/Atom ~/.bash_profile'
+alias cpbash='code ~/dotfiles/.bash_profile'
 alias spbash='source ~/.bash_profile'
 alias bh='cat ~/.bash_history'
 
@@ -67,7 +67,7 @@ alias ahost='/Applications/Atom.app/Contents/MacOS/Atom /etc/hosts'
 alias js='osascript -l JavaScript'
 
 alias pass='column -s, -t < ~/pass.csv | cat -n'
-alias apass='/Applications/Atom.app/Contents/MacOS/Atom ~/pass.csv'
+alias cpass='code ~/pass.csv'
 
 #docker
 alias dp="docker ps"
@@ -75,6 +75,7 @@ alias dpa="docker ps -a"
 alias de="docker exec -it"
 alias dn="docker network"
 alias dl="docker logs"
+alias di="docker images"
 alias drmi="docker rmi $(sudo docker images -q)"
 alias drm="docker rm $(sudo docker ps -a -q)"
 alias dm="docker-machine"
